@@ -20,7 +20,7 @@ class _CoordinatorDashBoardState extends State<CoordinatorDashBoard> {
           padding:
               EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(30)),
           child: DefaultButton(
-            text: "Continue",
+            text: "Save",
             press: () {},
           ),
         ),
