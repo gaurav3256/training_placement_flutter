@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:training_placement/splashScreen.dart';
-
-import 'routes.dart';
+import 'responsive/desktop_scaffold.dart';
+import 'responsive/mobile_scaffold.dart';
+import 'responsive/responsive_layout.dart';
+import 'responsive/tablet_scaffold.dart';
 import 'theme.dart';
 
 void main() {
@@ -18,8 +20,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Training And Placement',
       theme: theme(),
-      initialRoute: SplashScreen.routeName,
-      routes: routes,
+      home: const SplashScreen(),
+      // home: ResponsiveLayout(
+      //   mobileScaffold: const MobileScaffoldState(),
+      //   tabletScaffold: const TabletScaffoldState(),
+      //   desktopScaffold: const DesktopScaffoldState(),
+      // ),
     );
   }
 }

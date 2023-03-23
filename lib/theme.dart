@@ -41,9 +41,9 @@ AppBarTheme appBarTheme() {
     color: Colors.white,
     elevation: 0,
     systemOverlayStyle: SystemUiOverlayStyle.light,
-    iconTheme: IconThemeData(color: Colors.black),
+    iconTheme: IconThemeData(color: Colors.white),
     titleTextStyle: TextStyle(
-      color: Color(0XFF8B8B8B),
+      color: Colors.white,
       fontSize: 18,
       fontWeight: FontWeight.w500,
     ),

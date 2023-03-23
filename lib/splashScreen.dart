@@ -2,8 +2,10 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:training_placement/constants.dart';
-import 'package:training_placement/coordinator/coordinatorDashBoard.dart';
-
+import 'responsive/desktop_scaffold.dart';
+import 'responsive/mobile_scaffold.dart';
+import 'responsive/responsive_layout.dart';
+import 'responsive/tablet_scaffold.dart';
 import 'size_config.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -20,10 +22,14 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
 
-    Timer(const Duration(seconds: 8), () {
+    Timer(const Duration(seconds: 3), () {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (_) => const CoordinatorDashBoard(),
+          builder: (_) => ResponsiveLayout(
+            mobileScaffold: const MobileScaffoldState(),
+            tabletScaffold: const TabletScaffoldState(),
+            desktopScaffold: const DesktopScaffoldState(),
+          ),
         ),
       );
     });
@@ -40,7 +46,7 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             Image.asset(
               "assets/images/logo.png",
-              scale: 50,
+              scale: 2,
             )
           ],
         ),

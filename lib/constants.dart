@@ -1,14 +1,57 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
+import 'package:path/path.dart' as Path;
+import 'package:training_placement/coordinator/coordinatorDashBoard.dart';
+import 'package:training_placement/coordinator/update_company_details.dart';
+import 'package:training_placement/coordinator/upload_companies.dart';
+import 'package:training_placement/coordinator/upload_csv_file.dart';
+import 'package:training_placement/coordinator/view_students_list.dart';
+import 'package:training_placement/splashScreen.dart';
+
+import 'shared/drawer_header.dart';
 // import 'size_config.dart';
 
 const bgColor = Color(0xFFF5F5F5);
-const kPrimaryColor = Color(0xFF07AF4F);
+const kPrimaryColor = Color(0xFFFA5748);
 const kPrimaryLightColor = Color(0xFFFFECDF);
 const kSecondaryColor = Color(0xFF2D4262);
 const kTextColor = Color(0xFF757575);
 
 const kAnimationDuration = Duration(milliseconds: 200);
 const defaultDuration = Duration(milliseconds: 250);
+
+
+
+// var myDrawer = Drawer(
+//   child: SingleChildScrollView(
+//     child: Column(
+//       children: [
+//         const HeaderDrawer(),
+//         ...drawerMenuItems.map(
+//           (data) {
+//             return ListTile(
+//               leading: data['leading'],
+//               title: Text(
+//                 data['title'],
+//               ),
+//               onTap: () {
+//                 // Navigator.pop(context as BuildContext);
+//                 if (data['action_id'] == 1) {
+//                   Navigator.of(context as BuildContext).push(
+//                     MaterialPageRoute(
+//                       builder: (context) => SplashScreen(),
+//                     ),
+//                   );
+//                 }
+//               },
+//             );
+//           },
+//         ),
+//       ],
+//     ),
+//   ),
+// );
 
 // final otpInputDecoration = InputDecoration(
 //   contentPadding:
@@ -26,7 +69,7 @@ const defaultDuration = Duration(milliseconds: 250);
 // }
 
 // My Text Styles
-const headingStyle = TextStyle(
+const kheadingStyle = TextStyle(
   fontSize: 28,
   fontWeight: FontWeight.bold,
   color: Colors.black,

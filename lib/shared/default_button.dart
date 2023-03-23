@@ -18,17 +18,19 @@ class DefaultButton extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       height: getProportionateScreenHeight(56),
-      child: MaterialButton(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
-        color: kPrimaryColor,
-        onPressed: press as void Function()?,
+      child: ElevatedButton(
+        onPressed: () {},
+        style: ElevatedButton.styleFrom(
+          padding: const EdgeInsets.symmetric(
+            horizontal: 40.0,
+            vertical: 20.0,
+          ),
+          backgroundColor: kPrimaryColor,
+          shape: const StadiumBorder(),
+        ),
         child: Text(
           text,
-          style: TextStyle(
-            fontSize: getProportionateScreenWidth(18),
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-          ),
+          style: const TextStyle(color: Colors.white, fontSize: 18),
         ),
       ),
     );
